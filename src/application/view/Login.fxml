@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="600.0" maxWidth="700.0" minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #241f20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.LoginController">
+   <children>
+      <Button fx:id="submitButton" layoutX="207.0" layoutY="503.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="74.0" style="-fx-background-color: #3097bf;" text="Submit" textFill="#e1cf79">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Button>
+      <Label fx:id="errorText" alignment="CENTER" layoutX="148.0" layoutY="300.0" prefHeight="27.0" prefWidth="265.0" textFill="#bf2222" />
+      <Pane layoutX="520.0" layoutY="-7.0" prefHeight="608.0" prefWidth="178.0" style="-fx-background-color: #e55437;">
+         <children>
+            <Button fx:id="createNewAccount" layoutX="6.0" layoutY="272.0" mnemonicParsing="false" onAction="#createNewButton" prefHeight="72.0" prefWidth="167.0" style="-fx-background-color: #3097bf;" text="Create New Account" textAlignment="CENTER" textFill="#e1cf79" wrapText="true">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font></Button>
+            <Label alignment="CENTER" layoutY="217.0" prefHeight="58.0" prefWidth="174.0" text="New to Bam-Cal?" textFill="#241f20">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="699.0" style="-fx-background-color: #3097bf;">
+         <children>
+            <Label fx:id="title" alignment="CENTER_RIGHT" layoutX="48.0" layoutY="54.0" prefHeight="96.0" prefWidth="305.0" text="Cal" textFill="#e1cf79">
+               <font>
+                  <Font name="Arial Black" size="64.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../data/BAMCAL%20Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <GridPane layoutX="72.0" layoutY="227.0" prefHeight="267.0" prefWidth="397.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="174.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="223.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="85.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="userName" prefHeight="45.0" prefWidth="167.0" style="-fx-background-color: #b4b4b4;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </TextField>
+            <Label fx:id="unLabel" text="UserName" textFill="#e1cf79" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="28.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwd" prefHeight="45.0" prefWidth="167.0" style="-fx-background-color: #b4b4b4;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="pwLabel" text="Password" textFill="#e1cf79" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
+            <Label text="Account Type" textFill="#e1cf79">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="selector" prefWidth="150.0" style="-fx-background-color: #b4b4b4;" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

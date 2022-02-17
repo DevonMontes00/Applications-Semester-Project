@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #e55437;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.CreateNewClientController">
+   <children>
+      <GridPane layoutX="101.0" layoutY="99.0" prefHeight="370.0" prefWidth="455.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="156.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="50.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dateOfBirth" prefHeight="54.0" prefWidth="249.0" promptText="MM/DD/YYYY" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="selector" prefHeight="46.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="fullNL" text="Full Name" textFill="#e1cf79">
+               <font>
+                  <Font name="Arial Black" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="emL" text="Email" textFill="#e1cf79" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="phonL" text="Phone " textFill="#e1cf79" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Black" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="dobL" prefHeight="43.0" prefWidth="191.0" text="Date of Birth" textFill="#e1cf79" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="docL" text="Doctor" textFill="#e1cf79" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Black" size="29.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fullNamebox" prefHeight="50.0" prefWidth="215.0" promptText="First Last" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailbox" prefHeight="50.0" prefWidth="215.0" promptText="example@mail.com" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="21.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phonebox" prefHeight="50.0" prefWidth="215.0" promptText="(222) 347-5555" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Label fx:id="title" alignment="CENTER" layoutX="77.0" layoutY="8.0" prefHeight="76.0" prefWidth="553.0" text="Create New Account">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitButton" layoutX="284.0" layoutY="515.0" mnemonicParsing="false" onAction="#handle" prefHeight="57.0" prefWidth="133.0" style="-fx-background-color: #3097bf;" text="Submit">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
